@@ -1,0 +1,101 @@
+body {
+    background-image: url("imgs/jelly.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    margin: 0;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.85);
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: "hobeaux", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+    color: #b91620;
+     margin-top: 15px;
+    margin-bottom: 90px;
+}
+
+h2 {
+    font-family: "hobeaux", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #245c36;
+}
+
+h3 {
+    font-family: "hobeaux", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #527a3d;
+}
+
+p,
+li {
+    font-family: "hobeaux", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+    color: #263322;
+}
+
+.swap-container {
+    display: flex;
+    gap: 30px;
+}
+
+.swap-person {
+    width: 50%;
+}
+
+.swap-person img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+.learn-button {
+    display: inline-block;
+
+    font-family: "hobeaux", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+
+    background-color: #d71920;
+    color: white;
+
+    padding: 12px 24px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.learn-button:hover {
+    background-color: #a90f16;
+}
+
+section img {
+    border-radius: 18px;
+}
+
+.result-images {
+    display: flex;
+    gap: 28px;
+}
+
+.result-images img {
+    width: 45%;
+    border-radius: 18px;
+}
