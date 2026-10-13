@@ -1,0 +1,73 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ff5b61;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("imgs/diner.png");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+
+.potato {
+  display: block;
+  width: 60%;
+}
+
+.hashbrown,
+.fries {
+  display: none;
+}
+
+@media (max-width: 1200px), (max-height: 500px) {
+
+  .potato {
+    display: none;
+  }
+
+  .hashbrown {
+    display: block;
+    width: 55%;
+  }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+  .potato,
+  .hashbrown {
+    display: none;
+  }
+
+  .fries {
+    display: block;
+    width: 65%;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+
+}
+
+img {
+  max-width: 100%;
+  max-height: 80vh;
+  height: auto;
+  object-fit: contain;
+}
