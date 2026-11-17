@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: #202020;
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+}
+
+.page {
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.garden {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  max-width: 650px;
+  aspect-ratio: 1 / 1.1;
+  overflow: hidden;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 14%;
+  background: #79594b;
+}
+
+.stem {
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+
+  width: 26%;
+  height: auto;
+}
+
+.flower {
+  position: absolute;
+  left: 23%;
+  top: 26%;
+  width: 64%;
+  height: 32%;
+
+  display: grid;
+  place-items: center;
+}
+
+.petal {
+  grid-area: 1 / 1;
+
+  width: 42%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+
+  transform:
+    rotate(var(--angle))
+    translateY(-38%)
+    rotate(var(--correct));
+}
+
+
+.p1 {
+  --angle: -80deg;
+  --correct: -65deg;
+}
+
+.p4 {
+  --angle: -62deg;
+  --correct: 65deg;
+}
+
+.p5 {
+  --angle: -44deg;
+  --correct: 35deg;
+}
+
+.p7 {
+  --angle: -26deg;
+  --correct: 0deg;
+}
+
+.p3 {
+  --angle: -8deg;
+  --correct: 0deg;
+}
+
+.p2 {
+  --angle: 10deg;
+  --correct: -35deg;
+}
+
+.p8 {
+  --angle: 28deg;
+  --correct: -75deg;
+}
+
+.p10 {
+  --angle: 47deg;
+  --correct: -65deg;
+}
+
+.p9 {
+  --angle: 64deg;
+  --correct: 65deg;
+}
+
+.p6 {
+  --angle: 82deg;
+  --correct: 75deg;
+}
+
+.todo {
+  flex: 0 1 390px;
+  border: 2px solid #202020;
+  padding: 30px;
+}
+
+h1 {
+  margin: 0 0 38px;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: normal;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.tasks label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  font-size: clamp(24px, 2.6vw, 34px);
+  cursor: pointer;
+}
+
+.tasks input {
+  appearance: none;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid #202020;
+  border-radius: 0;
+  background: white;
+  cursor: pointer;
+}
+
+.tasks input:checked::after {
+  content: "✓";
+  color: #2eb17d;
+  font-family: sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.tasks input:focus-visible {
+  outline: 3px solid #2eb17d;
+  outline-offset: 5px;
+}
+
+@media (max-width: 750px) {
+  .page {
+    flex-direction: column;
+    gap: 30px;
+    padding: 24px 16px;
+  }
+
+  .garden {
+    flex: none;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .todo {
+    flex: none;
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+.leaf {
+  position: absolute;
+  left: 47%;
+  bottom: 26%;
+
+  width: 20%;
+  height: auto;
+  pointer-events: none;
+}
+
+.page {
+  position: relative;
+  isolation: isolate;
+}
+
+.ground {
+  position: absolute;
+  left: calc(50% - 50vw);
+  bottom: 0;
+
+  width: 100vw;
+  height: 14%;
+  background: #79594b;
+
+  z-index: -1;
+  pointer-events: none;
+}
+
+.garden {
+  overflow: visible;
+}
+
+.petal {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal.fallen {
+    animation-duration: 0.01s;
+  }
+}
+
+.stem {
+  left: 38.5%;
+  width: 29.9%;
+}
+
+.leaf {
+  left: 46.55%;
+  bottom: 29.9%;
+  width: 23%;
+}
+
+.flower {
+  left: 18.95%;
+  top: 14.9%;
+  width: 73.6%;
+  height: 36.8%;
+}
