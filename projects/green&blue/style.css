@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  padding: 24px clamp(18px, 5vw, 72px) 56px;
+  padding: 24px 64px 56px;
   min-height: 100vh;
   background: linear-gradient(135deg, #d5efdc, #bddcf8);
   color: #214743;
@@ -41,7 +41,7 @@ h1 { font-weight: 900;
 }
 
 .pin {
-  width: clamp(58px, 11vw, 132px);
+  width: 132px;
   aspect-ratio: 1;
   flex: none;
   border-radius: 50%;
